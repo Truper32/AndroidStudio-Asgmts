@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/adapter_Courses"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="left"
+        android:text="Courses:"
+        android:textColor="@android:color/black"
+        android:textAlignment="viewStart"
+        tools:ignore="RtlCompat" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:weightSum="100">
+
+        <TextView
+            android:id="@+id/adapter_Assignments"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="left"
+            android:lines="20"
+            android:text="Assignments:"
+            android:textColor="@android:color/black"
+            android:textAlignment="viewStart"
+            tools:ignore="RtlCompat" />
+
+
+        <TextView
+            android:id="@+id/adapter_Grades_x"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_toRightOf="@id/adapter_Assignments"
+            android:gravity="left"
+            android:visibility="visible"
+            android:lines="10"
+            android:text=" %"
+            android:textAlignment="viewStart"
+            android:textColor="@android:color/black"
+            tools:ignore="RtlCompat" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/adapter_Average"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:text="Average:"
+        android:textColor="@android:color/black"
+        android:textAlignment="viewStart"
+        tools:ignore="RtlCompat" />
+
+</LinearLayout>

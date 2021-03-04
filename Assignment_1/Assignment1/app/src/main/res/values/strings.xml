@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Assignment 1</string>
+    <string name="Name">Name</string>
+    <string name="Age">Age</string>
+    <string name="StudentID">Student ID></string>
+    <string name="show_my_grades">show my grades</string>
+    <string name="name">Name</string>
+    <string name="SharedPreferenceHelper_Name">name</string>
+    <string name="SharedPreferenceHelper_Age">age</string>
+    <string name="SharedPreferenceHelper_studentID">studentID</string>
+    <string name="SharedPreferenceHelper_FileName">Profile</string>
+    <string name="Profile">Profile</string>
+    <string name="Grades">Grades</string>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/transitionContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    tools:ignore="InvalidId">
+
+    <TextView
+        android:id="@+id/Nametxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="106dp"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/Name_txt"
+        app:layout_constraintStart_toStartOf="@+id/Name_txt"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/AgeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="Age"
+        app:layout_constraintBottom_toTopOf="@+id/Age_txt"
+        app:layout_constraintStart_toStartOf="@+id/Age_txt"
+        app:layout_constraintTop_toBottomOf="@+id/Name_txt"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/StudentIDtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:text="Student ID"
+        app:layout_constraintBottom_toTopOf="@+id/StudentID_txt"
+        app:layout_constraintStart_toStartOf="@+id/StudentID_txt"
+        app:layout_constraintTop_toBottomOf="@+id/Age_txt" />
+
+    <EditText
+        android:id="@+id/Name_txt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="54dp"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/AgeTxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Nametxt" />
+
+    <EditText
+        android:id="@+id/Age_txt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="3"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/StudentIDtxt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AgeTxt" />
+
+    <EditText
+        android:id="@+id/StudentID_txt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="125dp"
+        android:ems="10"
+        android:inputType="number"
+        android:maxLength="8"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/StudentIDtxt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

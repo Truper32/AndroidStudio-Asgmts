@@ -1,0 +1,85 @@
+package com.example.assignment1;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import java.util.ArrayList;
+
+public class CourseAdapter extends ArrayAdapter<Course> {
+
+    private Context context;
+    private ArrayList<Course> courses = new ArrayList<>();
+    private ArrayList<Assignment> assignments = new ArrayList<>();
+    private static LayoutInflater inflater;
+    int layoutResourceID;
+
+
+    public CourseAdapter(Context context, int resource, ArrayList<Course> courses){
+        super(context, resource, courses);
+
+        this.layoutResourceID = resource;
+        this.context = context;
+        this.courses = courses;
+
+
+        //inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
+ @Override
+    public int getCount() {
+        return courses.size();
+    }
+
+    @Override
+    public Course getItem(int position) {
+        return courses.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    // Gets view and attaches it to the ListView
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        // Display Student Information
+
+        View view = convertView;
+
+        LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        view = inflater.inflate(R.layout.courseadapter_layout, null);
+
+        int number = position;
+        if (convertView == null){
+           convertView = LayoutInflater.from(getContext()).inflate(R.layout.courseadapter_layout,parent,false);
+        }
+
+        //Course data = courses.get(number);
+        //assignments = data.getAssignments();
+
+        TextView course = (TextView) convertView.findViewById(R.id.adapter_Courses);
+        TextView assignment = (TextView) convertView.findViewById(R.id.adapter_Assignments);
+        TextView average = (TextView) convertView.findViewById(R.id.adapter_Average);
+
+        //for (int j = 0; j < 5; j++) {
+        course.setText(courses.get(position).getCourseTitle());
+        assignment.setText(courses.get(position).getAssignments().get(position).getAssignmentTitle());
+
+        //    for (int i = 0; i < assignments.size(); i++) {
+            //    string.append(assignments.get(i).getAssignmentTitle() + "     " + assignments.get(i).getAssGrade());
+                //assignment.setText( data.getAssignments().get(i).getAssignmentTitle() + "     " + assignments.get(i).getAssGrade());
+                //assignment.setText( data.getAssignments());
+        //    }
+        //}
+
+        //average.setText();
+        return view;
+    }
+
+}
