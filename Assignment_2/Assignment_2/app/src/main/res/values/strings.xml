@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Assignment 2</string>
+    <string name="assignment_activity_name">Assignments</string>
+    <string name="CourseIDString">Course ID</string>
+    <string name="delete_course">Delete Course</string>
+    <string name="CourseName">Course Name</string>
+</resources>

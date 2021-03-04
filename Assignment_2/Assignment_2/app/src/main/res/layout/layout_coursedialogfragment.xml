@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_above="@+id/edit_courseCode"
+        android:layout_marginBottom="60dp"
+        android:text="COURSES"
+        android:textColor="@android:color/black"
+        />
+
+    <EditText
+        android:hint="Course Title"
+        android:id="@+id/edit_courseTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:id="@+id/edit_courseCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Course Code"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/edit_courseTitle"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/SaveButton_Course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="80dp"
+        android:layout_below="@+id/edit_courseCode"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/CancelButton_Course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_courseCode"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="80dp"
+        android:text="Cancel" />
+
+
+</RelativeLayout>
