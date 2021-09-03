@@ -8,4 +8,4 @@ Design and implement an android mobile application to view a list of courses wit
 
 ## Assignment # 2
 
-Design and implement an android mobile application with description given below. Using SQLite to save data and read data in an MVC structure with the use of DialogFragment.
+Design and implement an android mobile application. The SQLite database must be used to save data and read data in an MVC structure with the use of DialogFragment.
